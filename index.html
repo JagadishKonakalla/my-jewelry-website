@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jewelry Store</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Welcome to My Jewelry Store</h1>
+    <div class="product">
+      <h2>Gold Necklace</h2>
+      <p>Price: $200</p>
+      <button onclick="openForm('Gold Necklace')">I'm Interested</button>
+    </div>
+    <div class="product">
+      <h2>Diamond Earrings</h2>
+      <p>Price: $300</p>
+      <button onclick="openForm('Diamond Earrings')">I'm Interested</button>
+    </div>
+    <div id="interestForm" style="display: none">
+      <h3>Enter Your Details</h3>
+      <form id="contactForm">
+        <input type="hidden" id="productInput" name="product" value="" />
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      emailjs.init("TFY0HBy45ZVIUOn1C"); // Use your Public Key here
+    </script>
+  </body>
+</html>
