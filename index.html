@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jewelry Store</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
   </head>
+
   <body>
     <h1>Welcome to My Jewelry Store</h1>
     <div class="product">
@@ -27,13 +32,11 @@
         <button type="submit">Submit</button>
       </form>
     </div>
-    <script src="script.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.emailjs.com/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
+
+    <script>
       emailjs.init("TFY0HBy45ZVIUOn1C"); // Use your Public Key here
     </script>
+
+    <script src="script.js"></script>
   </body>
 </html>
