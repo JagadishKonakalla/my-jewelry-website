@@ -1,0 +1,4 @@
+# Ignore system and application directories
+AppData/
+Program Files/
+Packages/

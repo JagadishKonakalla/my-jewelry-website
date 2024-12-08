@@ -5,24 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jewelry Store</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
   </head>
-
   <body>
-    <h1>Welcome to My Jewelry Store</h1>
-    <div class="product">
-      <h2>Gold Necklace</h2>
-      <p>Price: $200</p>
-      <button onclick="openForm('Gold Necklace')">I'm Interested</button>
-    </div>
-    <div class="product">
-      <h2>Diamond Earrings</h2>
-      <p>Price: $300</p>
-      <button onclick="openForm('Diamond Earrings')">I'm Interested</button>
-    </div>
+    <header>
+      <h1 class="brand-name">Krafty Mind</h1>
+      <nav>
+        <ul>
+          <li><a href="#gold">Gold</a></li>
+          <li><a href="#diamond">Diamond</a></li>
+          <li><a href="#offers">Offers</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <select id="filter" onchange="filterProducts()">
+      <option value="all">All</option>
+      <option value="Clip">Clip</option>
+      <option value="Brooch">Brooch</option>
+    </select>
+
+    <section class="product-grid">
+      <div class="product Brooch">
+        <img src="images/heart_stone.jpg" alt="Heart stone" />
+        <div class="product-details">
+          <h2>Heart stone</h2>
+          <p>Price: $200</p>
+          <button onclick="openForm('Heart stone')">I'm Interested</button>
+        </div>
+      </div>
+      <div class="product Ring">
+        <img src="images/dream_stone.jpg" alt="Dream stone" />
+        <div class="product-details">
+          <h2>Dream stone</h2>
+          <p>Price: $300</p>
+          <button onclick="openForm('Dream stone')">I'm Interested</button>
+        </div>
+      </div>
+      <div class="product Clip">
+        <img src="images/Choclate_heart_Clip.jpg" alt="Choclate heart clip" />
+        <div class="product-details">
+          <h2>Choclate heart clip</h2>
+          <p>Price: $300</p>
+          <button onclick="openForm('Choclate heart clip')">
+            I'm Interested
+          </button>
+        </div>
+      </div>
+      <div class="product Braclet">
+        <img
+          src="images/Choclate_heart_combo.jpg"
+          alt="Choclate ring & Braclet Combo"
+        />
+        <div class="product-details">
+          <h2>Choclate ring & Braclet Combo</h2>
+          <p>Price: $300</p>
+          <button onclick="openForm('Choclate ring & Braclet Combo')">
+            I'm Interested
+          </button>
+        </div>
+      </div>
+      <div class="product Clip">
+        <img src="images/Glass_Flower.jpg" alt="Glass Flower" />
+        <div class="product-details">
+          <h2>Glass Flower</h2>
+          <p>Price: $300</p>
+          <button onclick="openForm('Glass Flower')">I'm Interested</button>
+        </div>
+      </div>
+      <!-- Add more product cards as needed -->
+    </section>
+
     <div id="interestForm" style="display: none">
       <h3>Enter Your Details</h3>
       <form id="contactForm">
