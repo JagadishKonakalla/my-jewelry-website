@@ -18,6 +18,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
       },
       function (error) {
         alert("Failed to send your request. Please try again.");
+        console.log(error);
       }
     );
 });
